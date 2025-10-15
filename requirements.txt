@@ -1,27 +1,35 @@
+# Requirements (merged)
+# Note: This file was updated to prefer versions you provided where present.
+# The repository README and Dockerfile indicate Python 3.9. Some newer
+# package releases (for example recent numpy/pandas/black/etc.) may require
+# Python 3.10+; if you plan to use the newer pins below, consider updating
+# the project interpreter (Dockerfile/CI) to Python 3.10+.
+
 # Core Framework
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.6.0
+fastapi==0.103.1
+uvicorn==0.23.2
+pydantic==2.4.2
 pydantic-settings==2.1.0
-python-multipart==0.0.9
+python-multipart==0.0.6
 
 # Document Processing
-PyMuPDF==1.23.26
-pypdf==4.0.1
+# normalized PyMuPDF -> pymupdf (PyPI name: pymupdf)
+pymupdf==1.23.3
+pypdf==3.17.0
 python-docx==1.1.0
 docx2txt==0.8
 
 # Embeddings and Vector Store
-sentence-transformers==2.3.1
-chromadb==0.4.22
+sentence-transformers==2.2.2
+chromadb==0.4.18
 pinecone-client==3.0.0
 
 # LLM Integration
-openai==1.10.0
+openai==1.3.0
 tiktoken==0.5.2
 
 # Utilities
-python-dotenv==1.0.1
+python-dotenv==1.0.0
 numpy==1.26.3
 pandas==2.2.0
 
@@ -38,3 +46,4 @@ pytest-cov==4.1.0
 black==24.1.1
 flake8==7.0.0
 mypy==1.8.0
+
